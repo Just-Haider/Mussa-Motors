@@ -192,6 +192,7 @@ function openWhatsApp() {
     }
 }
 
+// Navbar logic
 
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation
@@ -325,5 +326,108 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             }
         });
+    });
+});
+
+
+
+// Enhanced Modal with Swipe Support
+let touchStartX = 0;
+let touchEndX = 0;
+let currentImageIndex = 0;
+let currentCarImages = [];
+const modal = document.querySelector('.modal');
+const swipeTrack = document.querySelector('.swipe-track');
+
+function openModal(images, startIndex) {
+    currentCarImages = images;
+    currentImageIndex = startIndex;
+    
+    // Clear previous images
+    swipeTrack.innerHTML = '';
+    
+    // Add all images to swipe track
+    currentCarImages.forEach((imgSrc, index) => {
+        const img = document.createElement('img');
+        img.src = imgSrc;
+        img.alt = `Car Image ${index + 1}`;
+        img.loading = "eager"; // Force load images
+        swipeTrack.appendChild(img);
+    });
+    
+    // Set initial position
+    updateModalPosition();
+    modal.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+}
+
+function updateModalPosition() {
+    const counter = document.querySelector('.image-counter');
+    swipeTrack.style.transform = `translateX(-${currentImageIndex * 100}%)`;
+    counter.textContent = `${currentImageIndex + 1} / ${currentCarImages.length}`;
+}
+
+function nextImage() {
+    if (currentImageIndex < currentCarImages.length - 1) {
+        currentImageIndex++;
+        updateModalPosition();
+    }
+}
+
+function prevImage() {
+    if (currentImageIndex > 0) {
+        currentImageIndex--;
+        updateModalPosition();
+    }
+}
+
+// Event Listeners
+document.querySelector('.close-modal').addEventListener('click', () => {
+    modal.style.display = 'none';
+    document.body.style.overflow = 'auto';
+});
+
+document.querySelector('.next-btn').addEventListener('click', nextImage);
+document.querySelector('.prev-btn').addEventListener('click', prevImage);
+
+// Touch events for swiping
+swipeTrack.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+}, { passive: true });
+
+swipeTrack.addEventListener('touchmove', (e) => {
+    touchEndX = e.touches[0].clientX;
+}, { passive: true });
+
+swipeTrack.addEventListener('touchend', () => {
+    const threshold = 50; // Minimum swipe distance
+    
+    if (touchEndX < touchStartX - threshold) {
+        nextImage();
+    } else if (touchEndX > touchStartX + threshold) {
+        prevImage();
+    }
+}, { passive: true });
+
+// Keyboard navigation
+document.addEventListener('keydown', (e) => {
+    if (modal.style.display === 'block') {
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+        if (e.key === 'Escape') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    }
+});
+
+// Update your existing image click handlers
+document.querySelectorAll('.main-img, .thumbnail').forEach(img => {
+    img.addEventListener('click', function() {
+        const carCard = this.closest('.car-card');
+        const mainImg = carCard.querySelector('.main-img').src;
+        const thumbnails = Array.from(carCard.querySelectorAll('.thumbnail')).map(t => t.src);
+        openModal([mainImg, ...thumbnails], thumbnails.includes(this.src) ? 
+                 thumbnails.indexOf(this.src) + 1 : 0);
     });
 });
