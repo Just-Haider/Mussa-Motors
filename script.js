@@ -158,6 +158,41 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
+// Whatsapp logic
+
+function openWhatsApp() {
+    // Check if mobile device
+    const isMobile = /Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    
+    // WhatsApp URL schemes
+    const mobileUrl = 'whatsapp://send?phone=923155187227';
+    const desktopUrl = 'https://web.whatsapp.com/send?phone=923155187227';
+    const webUrl = 'https://wa.me/923155187227';
+    
+    if (isMobile) {
+        // Try to open WhatsApp app
+        window.location.href = mobileUrl;
+        
+        // Fallback if app not installed
+        setTimeout(function() {
+            if (!document.hidden) {
+                window.location.href = webUrl;
+            }
+        }, 2000);
+    } else {
+        // Try to open WhatsApp desktop app
+        window.location.href = 'whatsapp://send?phone=923155187227';
+        
+        // Fallback to web version
+        setTimeout(function() {
+            if (!document.hidden) {
+                window.location.href = desktopUrl;
+            }
+        }, 500);
+    }
+}
+
+
 document.addEventListener('DOMContentLoaded', function() {
     // Mobile Navigation
     const hamburger = document.querySelector('.hamburger');
