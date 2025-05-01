@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mussa Motors | Best Car Showroom</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="assets/2a506ce5-57d6-49de-9143-c5ad9b4ec0a4.jpg">
+    <link rel="preload" as="image" href="assets/Hero bg/hero1.jpg">
+    <link rel="preload" as="image" href="assets/Hero bg/hero2.jpg">
+    <link rel="preload" as="image" href="assets/Hero bg/hero3.jpg">
+
+</head>
+
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="loading-vehicle-container">
+                <div class="loading-vehicle">
+                    <!-- Vehicles will be added by JavaScript -->
+                </div>
+            </div>
+            <div class="loading-bar-container">
+                <div class="loading-bar"></div>
+            </div>
+            <p>Loading Luxury Experience...</p>
+        </div>
+    </div>
+
+    <!-- Header/Navigation -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>MUSSA<span>MOTORS</span></h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#inventory">Inventory</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slides">
+            <div class="slide active" style="background-image: url('assets/Hero\ bg/hero1.jpg') ;">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1>Unmatched Automotive Excellence</h1>
+                    <p>Discover the world's most exclusive vehicles curated for the discerning enthusiast.</p>
+                    <a href="#inventory" class="btn">Explore Collection</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('assets/Hero\ bg/hero2.jpg');">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1>Precision Craftsmanship</h1>
+                    <p>Experience the pinnacle of automotive engineering and luxury.</p>
+                    <a href="#inventory" class="btn">View Inventory</a>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('assets/Hero\ bg/hero3.jpg');">
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <h1>Your Dream Awaits</h1>
+                    <p>Find the perfect vehicle to match your lifestyle and aspirations.</p>
+                    <a href="#inventory" class="btn">Begin Journey</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-controls">
+            <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+            <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+        </div>
+        <div class="hero-indicators"></div>
+    </section>
+
+    <!-- Inventory Section -->
+    <section class="inventory" id="inventory">
+        <div class="container">
+            <h2 class="section-title">Our Collection</h2>
+            <div class="cars-grid">
+                <!-- Car Card 1 -->
+                <div class="car-card">
+                    <div class="car-images">
+                        <img src="assets/vigo/e119465b-1b1c-4cd1-8497-25bcd0c64c5d.jpg" data-load="true" alt="Luxury Car Model X"
+                            class="main-img">
+                        <div class="thumbnail-container">
+                            <img src="assets/vigo/34338e0a-2633-4611-bbb1-0efd27472849.jpg" alt="Thumbnail 1"
+                                class="thumbnail">
+                            <img src="assets/vigo/395413a5-6e22-4a7c-9c8f-5bc2ab440c45.jpg" alt="Thumbnail 2"
+                                class="thumbnail">
+                            <img src="assets/vigo/853d737f-be21-4362-8529-d925492f66f0.jpg" alt="Thumbnail 3"
+                                class="thumbnail">
+                            <img src="assets/vigo/87f02b6b-4e7f-49e9-b105-ae6b83dc9eae.jpg" alt="Thumbnail 4"
+                                class="thumbnail">
+                            <img src="assets/vigo/d223f085-ff35-4682-8ffd-4e2ef368daff.jpg" alt="Thumbnail 5"
+                                class="thumbnail">
+                        </div>
+                    </div>
+                    <div class="car-details">
+                        <h3>Toyota Hilux Vigo</h3>
+                        <p class="price">10,000,000 pkr</p>
+                        <ul class="specs">
+                            <li><i class="fas fa-tachometer-alt"></i> 80,000 Km</li>
+                            <li><i class="fas fa-bolt"></i> 2.8L Diesel</li>
+                            <li><i class="fas fa-cogs"></i> 2019 Edition</li>
+                        </ul>
+                        <p class="description">A rugged blend of power and reliability, the 2019 Toyota Vigo delivers
+                            bold performance, modern features, and unmatched durability for every terrain</p>
+                        <a href="#contact"><button class="btn view-btn">Contact Now</button></a>
+                    </div>
+                </div>
+
+                <!-- Car Card 2 -->
+                <div class="car-card">
+                    <div class="car-images">
+                        <img src="assets/2007 prado/3729128c-e6f4-4068-a99d-be0f7b174819.jpg" data-load="true" alt="Luxury Car Model Y"
+                            class="main-img">
+                        <div class="thumbnail-container">
+                            <img src="assets/2007 prado/01b356f7-99b4-4dba-96ad-8bafc195260f.jpg" alt="Thumbnail 1"
+                                class="thumbnail">
+                            <img src="assets/2007 prado/6e47b232-e7a0-42e9-b7ee-935eeee01da0.jpg" alt="Thumbnail 2"
+                                class="thumbnail">
+                            <img src="assets/2007 prado/766ea50e-e4fe-4bbb-8ae1-51daeb21e80c.jpg" alt="Thumbnail 3"
+                                class="thumbnail">
+                            <img src="assets/2007 prado//c916fc85-b10a-4241-9287-c380017bb39f.jpg" alt="Thumbnail 4"
+                                class="thumbnail">
+                            <img src="assets/2007 prado/aa278b73-d317-4d7c-9c0f-2a4bb60553e1.jpg" alt="Thumbnail 5"
+                                class="thumbnail">
+                            <img src="assets/2007 prado/b0684690-5d7b-4f2a-958c-7d0c45dfb9a5.jpg" alt="Thumbnail 6"
+                                class="thumbnail">
+                        </div>
+                    </div>
+                    <div class="car-details">
+                        <h3>Toyota Land Cruiser Prado TX Limited</h3>
+                        <p class="price">9,000,000 pkr</p>
+                        <ul class="specs">
+                            <li><i class="fas fa-tachometer-alt"></i> 44000 km</li>
+                            <li><i class="fas fa-bolt"></i> 2.7L Petrol</li>
+                            <li><i class="fas fa-cogs"></i> 2007 Edition</li>
+                        </ul>
+                        <p class="description">Manufactured in 2007 and imported in 2013, this TX Limited Prado offers
+                            luxury, durability, and off-road capability in a timeless, well-maintained SUV.
+                        </p>
+                        <a href="#contact"><button class="btn view-btn">Contact Now</button></a>
+                    </div>
+                </div>
+
+                <!-- Car Card 3 -->
+                <div class="car-card">
+                    <div class="car-images">
+                        <img src="assets/altas/64b152a2-3518-4244-b04f-f2be708afab4.jpg" data-load="true" alt="Luxury Car Model Z"
+                            class="main-img">
+                        <div class="thumbnail-container">
+                            <img src="assets/altas/7f2e7ff2-086c-4622-8fa1-2096cbf7f6f6.jpg" alt="Thumbnail 1"
+                                class="thumbnail">
+                            <img src="assets/altas/82a69789-e830-4a02-865f-83370da43a2b.jpg" alt="Thumbnail 2"
+                                class="thumbnail">
+                            <img src="assets/altas/82fe930f-4128-4345-b8c2-95574667e986.jpg" alt="Thumbnail 3"
+                                class="thumbnail">
+                            <img src="assets/altas/cdbd614b-5e9f-4522-a715-216f455bb838.jpg" alt="Thumbnail 4"
+                                class="thumbnail">
+                            <img src="assets/altas/cddf059a-50c6-43ea-817e-8d091df3446e.jpg" alt="Thumbnail 5"
+                                class="thumbnail">\
+                        </div>
+                    </div>
+                    <div class="car-details">
+                        <h3>Toyota Corolla Altis</h3>
+                        <p class="price">5,500,000 pkr</p>
+                        <ul class="specs">
+                            <li><i class="fas fa-tachometer-alt"></i> 75,000 km</li>
+                            <li><i class="fas fa-bolt"></i> 1.6 X Petrol</li>
+                            <li><i class="fas fa-cogs"></i> 2021 Edition</li>
+                        </ul>
+                        <p class="description">Experience refined comfort and smooth performance with the 2021 Toyota
+                            Corolla Altis 1.6 X—fuel-efficient, reliable, and packed with modern features.</p>
+                        <a href="#contact"><button class="btn view-btn">Contact Now</button></a>
+                    </div>
+                </div>
+
+                <!-- Car Card 4 -->
+                <div class="car-card">
+                    <div class="car-images">
+                        <img src="assets/2014 civic/width_550.jpg" alt="Luxury Car Model A" data-load="true" class="main-img">
+                        <div class="thumbnail-container">
+                            <img src="assets/2014 civic/a.jpg" alt="Thumbnail 1" class="thumbnail">
+                            <img src="assets/2014 civic/240dbf61-ec70-43bd-a666-900015d3ed4e.jpg" alt="Thumbnail 2"
+                                class="thumbnail">
+                            <img src="assets/2014 civic/5f22f45c-ae2b-46d2-8b3e-b79a6f580911.jpg" alt="Thumbnail 3"
+                                class="thumbnail">
+                            <img src="assets/2014 civic/d0c6659b-432e-4b7d-bd10-19973a8ad51b.jpg" alt="Thumbnail 4"
+                                class="thumbnail">
+                            <img src="assets/2014 civic/b.jpg" alt="Thumbnail 5" class="thumbnail">
+                        </div>
+                    </div>
+                    <div class="car-details">
+                        <h3>Honda Civic 1.8 i-VTEC</h3>
+                        <p class="price">3,450,000 pkr</p>
+                        <ul class="specs">
+                            <li><i class="fas fa-tachometer-alt"></i> 110,000 km</li>
+                            <li><i class="fas fa-bolt"></i> 1.8L i-VTEC Petrol</li>
+                            <li><i class="fas fa-cogs"></i> 2014 Edition</li>
+                        </ul>
+                        <p class="description">Stylish and reliable, the 2017 Honda Civic 1.8 i-VTEC delivers smooth
+                            performance, modern features, and comfort—perfect for city drives and long journeys.</p>
+                        <a href="#contact"><button class="btn view-btn">Contact Now</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">About Mussa Motors</h2>
+                <p>Founded in 2022, Mussa Motors has established itself as the premier destination for luxury automotive
+                    enthusiasts. Our showroom features an ever-changing collection of the world's most exclusive
+                    vehicles, each meticulously inspected and prepared to meet our exacting standards.</p>
+                <p>Our team of passionate experts is dedicated to helping you find the perfect vehicle to match your
+                    lifestyle and aspirations. Whether you're seeking unparalleled performance, cutting-edge technology,
+                    or simply the finest in automotive luxury, Elite Motors delivers an experience as exceptional as the
+                    vehicles we offer.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>3+</h3>
+                        <p>Years in Business</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100+</h3>
+                        <p>Vehicles Sold</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>100%</h3>
+                        <p>Client Satisfaction</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Contact Us</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Visit Our Showroom</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Plot No. 46, PECO Road, Lahore, Pakistan</p>
+                    <p><i class="fas fa-phone"></i> 0315-5187227 - Ali Jutt</p>
+                    <p><i class="fas fa-phone"></i> 0321-4111712 - Abdul Aleem</p>
+                    <p><i class="fas fa-envelope"></i> alijutt0186@gmail.com</p>
+                    <h3>Showroom Hours</h3>
+                    <p>Monday - Friday: 9:00 AM - 7:00 PM</p>
+                    <p>Saturday: 10:00 AM - 6:00 PM</p>
+
+                    <a href="https://mail.google.com/mail/u/0/#inbox?compose=new&to=alijutt0186@gmail.com"
+                        class="btn contact-btn">
+                        <i class="fas fa-paper-plane"></i> Contact Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Modal -->
+    <div class="modal">
+        <span class="close-modal">&times;</span>
+        <span class="prev-btn"><i class="fas fa-chevron-left"></i></span>
+        <span class="next-btn"><i class="fas fa-chevron-right"></i></span>
+        <div class="modal-content">
+            <img src="" alt="Enlarged Car Image" class="modal-img">
+            <div class="image-counter"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Elite Motors</h3>
+                    <p>Your premier destination for luxury and high-performance vehicles. Experience automotive
+                        excellence with our curated collection.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#inventory">Inventory</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Now</h3>
+                    <ul>
+                        <li>
+                            <p><i class="fas fa-phone"></i> 0315-5187227 - Ali Jutt</p>
+                        </li>
+                        <li>
+                            <p><i class="fas fa-phone"></i> 0321-4111712 - Abdul Aleem</p>
+                        </li>
+                        <li>
+                            <p><i class="fas fa-envelope"></i> alijutt0186@gmail.com</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 MUSSA Motors. All Rights Reserved.</p>
+            </div>
+        </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
